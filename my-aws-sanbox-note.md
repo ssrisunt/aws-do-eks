@@ -5,6 +5,12 @@
     2.2 sudo systemctl start docker.service #<-- start the service
     2.3 sudo systemctl stop docker.service #<-- stop the service
     2.4 sudo systemctl restart docker.service #<-- restart the service
+    # for centos how to enable docker server
+    2.5 sudo systemctl enable docker
+3.  2.6 # start docker
+    sudo systemctl start docker
+    # allow ec2-user to user docker
+    sudo usermod -a -G docker ec2-user
 3. Run ./build.sh
 4. # list all images
     docker images
@@ -29,3 +35,20 @@
     aws ecr list-images --repository-name aws-do-eks
 13. # configure new eks context
     aws eks --region us-east-1 update-kubeconfig --name aws-do-eks
+14. # add new cluster into kubeconfig using eksctl list cluster first
+    aws eks list-clusters
+    # add do-eks-yaml-karpenter into kubeconfig
+    aws eks --region us-east-1 update-kubeconfig --name do-eks-yaml-karpenter
+    eksctl utils write-kubeconfig --cluster do-eks-yaml-karpenter --set-kubeconfig-context
+15. # can i add additinal user into auth map using eksctl
+    eksctl create iamidentitymapping --cluster do-eks-yaml-karpenter --arn arn:aws:iam::${AWS_ACCOUNT_ID}:user/root --group system:masters --username root
+    # edit auth map
+    kubectl edit -n kube-system configmap/aws-auth
+16. # log eks pod have issue like tail ku
+    k
+    kubectl logs -n kube-system aws-node-2j8q2
+17. # can I read chart karperter from help repo
+    helm repo add karpenter https://awslabs.github.io/karpenter/charts
+    helm repo update
+    helm search repo karpenter
+    
