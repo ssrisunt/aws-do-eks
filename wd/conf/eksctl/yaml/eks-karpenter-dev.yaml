@@ -4,13 +4,13 @@ kind: ClusterConfig
 metadata:
   name: do-eks-yaml-karpenter-dev
   version: "1.25"
-  region: us-west-2
+  region: us-east-1
   tags:
     karpenter.sh/discovery: do-eks-yaml-karpenter-dev
 
 managedNodeGroups:
   - name: c5-xl-eks-karpenter-dev-ng
-    instanceType: c5.xlarge
+    instanceType: t3.medium
     instancePrefix: c5-xl
     privateNetworking: true
     minSize: 0

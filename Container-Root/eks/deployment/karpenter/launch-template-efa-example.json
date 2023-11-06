@@ -61,7 +61,7 @@
         "Placement": {
             "Tenancy": "default", 
             "GroupName": "eksctl-eks-karpenter-nodegroup-g4dn-8xl-NodeGroupPlacementGroup-LN9AYMNHVZDR", 
-            "AvailabilityZone": "us-west-2b"
+            "AvailabilityZone": "us-east-1b"
         }, 
         "IamInstanceProfile": {
             "Arn": "arn:aws:iam::<ACCOUNT_ID>:instance-profile/KarpenterInstanceProfile"

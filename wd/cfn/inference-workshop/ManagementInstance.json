@@ -13,7 +13,7 @@
 			"us-west-1": {
 				"ami": "ami-06800a9f539283f43"
 			},
-			"us-west-2": {
+			"us-east-1": {
 				"ami": "ami-093e5f43b11508e3e"
 			}
 		}

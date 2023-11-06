@@ -6,7 +6,7 @@ kind: ClusterConfig
 
 metadata:
   name: do-eks-spot
-  region: us-west-2
+  region: us-east-1
 
 managedNodeGroups:
 - name: spot

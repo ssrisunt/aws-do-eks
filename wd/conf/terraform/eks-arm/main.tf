@@ -107,7 +107,7 @@ module "eks" {
   eks_managed_node_groups = {
 
     sys = {
-      instance_types = ["c5.xlarge"]
+      instance_types = ["t3.medium"]
       min_size       = 1
       max_size       = 5
       desired_size   = 2
