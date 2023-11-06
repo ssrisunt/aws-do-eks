@@ -1,5 +1,5 @@
 #FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
-#FROM 763104351884.dkr.ecr.us-west-2.amazonaws.com/pytorch-training:2.0.1-gpu-py310-cu118-ubuntu20.04-ec2
+#FROM 763104351884.dkr.ecr.us-east-1.amazonaws.com/pytorch-training:2.0.1-gpu-py310-cu118-ubuntu20.04-ec2
 FROM nvcr.io/nvidia/pytorch:23.08-py3
 
 ARG MODEL_NAME=124M

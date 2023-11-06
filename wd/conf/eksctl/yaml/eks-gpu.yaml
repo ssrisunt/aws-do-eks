@@ -4,14 +4,14 @@ kind: ClusterConfig
 metadata:
   name: do-eks-yaml-gpu
   version: "1.25"
-  region: us-west-2
+  region: us-east-1
   tags:
     karpenter.sh/discovery: do-eks-yaml-gpu
 
 availabilityZones:
-  - us-west-2a
-  - us-west-2b
-  - us-west-2c
+  - us-east-1a
+  - us-east-1b
+  - us-east-1c
 
 managedNodeGroups:
 

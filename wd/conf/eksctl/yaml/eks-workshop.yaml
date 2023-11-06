@@ -4,11 +4,11 @@ kind: ClusterConfig
 metadata:
   name: do-eks-yaml-workshop
   version: "1.25"
-  region: us-west-2
+  region: us-east-1
 
 availabilityZones:
-  - us-west-2a
-  - us-west-2b
+  - us-east-1a
+  - us-east-1b
 
 iam:
   withOIDC: true
@@ -18,7 +18,7 @@ managedNodeGroups:
     instanceType: c5.9xlarge
     instancePrefix: c5-9xl
     privateNetworking: true
-    availabilityZones: ["us-west-2a","us-west-2b"]
+    availabilityZones: ["us-east-1a","us-east-1b"]
     efaEnabled: false
     minSize: 0
     desiredCapacity: 2

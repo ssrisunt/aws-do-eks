@@ -4,11 +4,11 @@ kind: ClusterConfig
 metadata:
   name: do-eks-yaml-gpu-fsdp
   version: "1.25"
-  region: us-west-2
+  region: us-east-1
 
 availabilityZones:
-  - us-west-2a
-  - us-west-2b
+  - us-east-1a
+  - us-east-1b
 
 iam:
   withOIDC: true
@@ -33,7 +33,7 @@ managedNodeGroups:
     instanceType: p4de.24xlarge
     instancePrefix: p4de-efa
     privateNetworking: true
-    availabilityZones: ["us-west-2b"]
+    availabilityZones: ["us-east-1b"]
     efaEnabled: true
     minSize: 0
     desiredCapacity: 0
@@ -53,7 +53,7 @@ managedNodeGroups:
     instanceType: g4dn.metal
     instancePrefix: g4dn-efa
     privateNetworking: true
-    availabilityZones: ["us-west-2b"]
+    availabilityZones: ["us-east-1b"]
     efaEnabled: true
     minSize: 0
     desiredCapacity: 0
@@ -69,7 +69,7 @@ managedNodeGroups:
     instanceType: g4dn.8xlarge
     instancePrefix: g4dn-8xl
     privateNetworking: true
-    availabilityZones: ["us-west-2b"]
+    availabilityZones: ["us-east-1b"]
     efaEnabled: true
     minSize: 0
     desiredCapacity: 0
@@ -85,7 +85,7 @@ managedNodeGroups:
     instanceType: g5.12xlarge
     instancePrefix: g5-12xl
     privateNetworking: true
-    availabilityZones: ["us-west-2b"]
+    availabilityZones: ["us-east-1b"]
     efaEnabled: true
     minSize: 0
     desiredCapacity: 2

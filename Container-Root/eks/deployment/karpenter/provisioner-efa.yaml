@@ -15,7 +15,7 @@ spec:
  #     - p3dn.24xlarge
     - key: "topology.kubernetes.io/zone"
       operator: In
-      values: ["us-west-2b"]
+      values: ["us-east-1b"]
   limits:
     resources:
       cpu: 1000

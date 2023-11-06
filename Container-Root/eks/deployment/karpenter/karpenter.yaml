@@ -330,7 +330,7 @@ spec:
             - name: CLUSTER_NAME
               value: eks-karpenter
             - name: CLUSTER_ENDPOINT
-              value: https://DC8D4F08527E2681E2F54A7F3B5C3861.sk1.us-west-2.eks.amazonaws.com
+              value: https://DC8D4F08527E2681E2F54A7F3B5C3861.sk1.us-east-1.eks.amazonaws.com
             - name: KARPENTER_SERVICE
               value: karpenter
             - name: SYSTEM_NAMESPACE
@@ -379,7 +379,7 @@ spec:
             - name: KUBERNETES_MIN_VERSION
               value: "1.19.0-0"
             - name: CLUSTER_ENDPOINT
-              value: https://DC8D4F08527E2681E2F54A7F3B5C3861.sk1.us-west-2.eks.amazonaws.com
+              value: https://DC8D4F08527E2681E2F54A7F3B5C3861.sk1.us-east-1.eks.amazonaws.com
             - name: KARPENTER_SERVICE
               value: karpenter
             - name: SYSTEM_NAMESPACE

@@ -195,7 +195,7 @@ spec:
       - env:
         - name: "DISABLE_TCP_EARLY_DEMUX"
           value: "false"
-        image: "602401143452.dkr.ecr.us-west-2.amazonaws.com/amazon-k8s-cni-init:v1.8.0"
+        image: "602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon-k8s-cni-init:v1.8.0"
         name: "aws-vpc-cni-init"
         securityContext:
           privileged: true

@@ -15,7 +15,7 @@ spec:
           imagePullPolicy: IfNotPresent
           restartPolicy: OnFailure
           containers:
-          #- image: <account>.dkr.ecr.us-west-2.amazonaws.com/cuda-efa-nccl-tests:ubuntu18.04
+          #- image: <account>.dkr.ecr.us-east-1.amazonaws.com/cuda-efa-nccl-tests:ubuntu18.04
           - image: public.ecr.aws/w6p6i9i7/aws-efa-nccl-rdma:base-cudnn8-cuda11-ubuntu18.04
             name: test-nccl-efa-launcher
             #env:
@@ -80,7 +80,7 @@ spec:
             #beta.kubernetes.io/instance-type: "g4dn.metal"
           imagePullPolicy: Always
           containers:
-          #- image: <account>.dkr.ecr.us-west-2.amazonaws.com/cuda-efa-nccl-tests:ubuntu18.04
+          #- image: <account>.dkr.ecr.us-east-1.amazonaws.com/cuda-efa-nccl-tests:ubuntu18.04
           - image: public.ecr.aws/w6p6i9i7/aws-efa-nccl-rdma:base-cudnn8-cuda11-ubuntu18.04
             name: test-nccl-efa-worker
             volumeMounts:
