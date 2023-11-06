@@ -16,7 +16,7 @@ spec:
         kind: Pod
         spec:
           nodeSelector:
-            beta.kubernetes.io/instance-type: p3.8xlarge # g4dn.12xlarge # p3dn.24xlarge
+            beta.kubernetes.io/instance-type: p3.8xlarge # g5.xlarge # p3dn.24xlarge
           containers:
             - name: elasticjob-worker
               image: xxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/pytorch-efa:latest

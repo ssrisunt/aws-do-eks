@@ -10,7 +10,7 @@ metadata:
 
 managedNodeGroups:
   - name: c5-xl-eks-karpenter-dev-ng
-    instanceType: c5.xlarge
+    instanceType: t3.medium
     instancePrefix: c5-xl
     privateNetworking: true
     minSize: 0

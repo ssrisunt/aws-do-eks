@@ -20,7 +20,7 @@ karpenter:
 
 managedNodeGroups:
   - name: c5-xl-do-eks-karpenter-ng
-    instanceType: c5.xlarge
+    instanceType: t3.medium
     instancePrefix: c5-xl
     privateNetworking: true
     minSize: 0
