@@ -19,7 +19,7 @@ cat << EOF
         {"DeviceIndex": 1, "NetworkCardIndex": 28, "Groups":["$SG"],"DeleteOnTermination":true, "InterfaceType": "efa"}
     ],
     "ImageId":"$AMI",
-    "InstanceType":"p5.48xlarge", 
+    "InstanceType":"g4dn.xlarge",
     "KeyName": "$SSH_KEY_NAME",
     "UserData":"$(./userdata.sh | base64 -w 0)"
 }

@@ -61,25 +61,9 @@ else
   	--set clusterName=${CLUSTER_NAME} \
   	--set clusterEndpoint=${CLUSTER_ENDPOINT} \
   	--set aws.defaultInstanceProfile=KarpenterNodeInstanceProfile-${CLUSTER_NAME} \
- 	--wait # for the defaulting webhook to install before creating a Provisioner
+ 	--debug --wait # for the defaulting webhook to install before creating a Provisioner
 
-  CLUSTER_KARPENTER_VERSION="v0.16.3"
- 	helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter --version ${CLUSTER_KARPENTER_VERSIONN} --namespace karpenter  \
-  	--set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=${KARPENTER_IAM_ROLE_ARN} \
-  	--set clusterName=${CLUSTER_NAME} \
-  	--set clusterEndpoint=${CLUSTER_ENDPOINT} \
-  	--set aws.defaultInstanceProfile=KarpenterNodeInstanceProfile-${CLUSTER_NAME} \
- 	--wait # for the defaulting webhook to install before creating a Provisioner
 
- 	helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter --version ${KARPENTER_VERSION} --namespace karpenter --create-namespace \
-  --set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=${KARPENTER_IAM_ROLE_ARN} \
-  --set settings.clusterName=${CLUSTER_NAME} \
-  --set settings.interruptionQueue=${CLUSTER_NAME} \
-  --set controller.resources.requests.cpu=1 \
-  --set controller.resources.requests.memory=1Gi \
-  --set controller.resources.limits.cpu=1 \
-  --set controller.resources.limits.memory=1Gi \
-  --wait
 
 fi
 

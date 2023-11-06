@@ -27,7 +27,7 @@ spec:
     - key: node.kubernetes.io/instance-type
       operator: In
       values:
-      - g4dn.8xlarge
+      - g4dn.8large
  #     - g5.48xlarge
  #     - p3dn.24xlarge
     - key: "topology.kubernetes.io/zone"

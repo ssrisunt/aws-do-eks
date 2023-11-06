@@ -23,10 +23,13 @@ else
 
 	kubectl create namespace monitoring
 
-	curl -fsSL https://karpenter.sh/"${CLUSTER_KARPENTER_VERSION}"/getting-started/getting-started-with-eksctl/prometheus-values.yaml | tee prometheus-values.yaml
+	export KARPENTER_VERSION=v0.32.1
+
+#	curl -fsSL https://karpenter.sh/"${CLUSTER_KARPENTER_VERSION}"/getting-started/getting-started-with-karpenter/prometheus-values.yaml | tee prometheus-values.yaml
+	curl -fsSL https://raw.githubusercontent.com/aws/karpenter/"${KARPENTER_VERSION}"/website/content/en/preview/getting-started/getting-started-with-karpenter/prometheus-values.yaml  | tee prometheus-values.yaml
 	helm install --namespace monitoring prometheus prometheus-community/prometheus --values prometheus-values.yaml
 
-	curl -fsSL https://karpenter.sh/"${CLUSTER_KARPENTER_VERSION}"/getting-started/getting-started-with-eksctl/grafana-values.yaml | tee grafana-values.yaml
+	curl -fsSL https://raw.githubusercontent.com/aws/karpenter/"${KARPENTER_VERSION}"/website/content/en/preview/getting-started/getting-started-with-karpenter/grafana-values.yaml | tee grafana-values.yaml
 	helm install --namespace monitoring grafana grafana-charts/grafana --values grafana-values.yaml
 fi
 
